@@ -5,5 +5,103 @@
 }
 
 #greeting-container {
-  margin-top: 20px;
+  margin-top: 50px;
+}
+
+body {
+	background: linear-gradient(45deg, #ff8519, #ee7752, #e73c7e, #9719ff);
+	background-size: 350% 350%;
+	animation: sweep 30s infinite;
+}
+
+@keyframes sweep {
+	0% {background-position: 0% 0%;}
+	50% {background-position: 100% 0%;}
+	100% {background-position: 0% 0%;}
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 3em;
+  color: white;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4em;
+  color: white;
+  margin-top: 35px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 0.95em;
+  color: white;
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
+}
+
+li {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 0.95em;
+  color: white;
+  padding: 2.5px;
+  letter-spacing: 0.5px;
+}
+
+hr {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.button1 {
+  color: white; 
+  border: 2px solid white;
+}
+
+.button1:hover {
+  background-color: white;
+  color: black;
+}
+
+#buttons {
+  text-align: center;
+  }
+
+a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+#surprisePic {
+  display: none;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 10px;
 }
