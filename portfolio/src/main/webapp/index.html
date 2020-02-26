@@ -8,12 +8,11 @@
   </head>
 
   <body>
+    <!–– Header ––>
+    <h1 align="center">Hello there! 👋<br>I'm Tengku Hana Shafikah.</h1>
+    
+    <!–– Site Content ––>
     <div id="content">
-        <!–– Header ––>
-        <h1 align="center">Hi! My name is Tengku Hana Shafikah.</h1>
-
-        <hr>
-
         <!–– About Me ––>
         <h2 align="center">Quick facts about me</h2>
         <ul>
@@ -49,12 +48,22 @@
         <p align="center">You're welcome to reach out to me through LinkedIn or Instagram if you'd
             like to chat and grab a cup of coffee or bubble tea. ☕</p>
 
+        <!–– Button Links ––>
         <div id="buttons">
-            <a href="https://www.linkedin.com/in/tengkuhanashafikah" button class="button button1">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/tengkuhanashafikah/" button class="button button1">LinkedIn</a>
             <a href="https://www.instagram.com/tghanashafikah/" button class="button button1">Instagram</a>
-            <button class="button button1" onclick="showImage()">Don't Click This</a>
-        </div>
+            <button class="button button1" onclick="showImage()">Nothing to see here...</button>
+            <br>
+            <br>
 
+            <!–– Test Servlet: Say Hello ––>
+            <p>If you're Hana, please click following button to have the website say hello to you 
+               (because you have no friends ahaha 😛). If you're not Hana then that's fine too.</p>
+            <button class="button button1" onclick="getGreeting()">Say Hello</button>
+            <br>
+            <br>
+            <div id="greeting-container"></div>
+        </div>
     </div>
   </body>
 </html>
