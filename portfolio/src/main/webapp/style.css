@@ -1,20 +1,14 @@
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  margin-bottom: 65px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 700px;
-  background: white;
+    background: white;
+    margin: 35px auto 65px auto;
+    padding: 35px 50px 50px 50px;
+    width: 700px;
 }
 
 body {
+    animation: sweep 10s infinite;
 	background: linear-gradient(45deg, #ff8519, #e73c7e, #9719ff, #00c7f2);
 	background-size: 350% 350%;
-	animation: sweep 10s infinite;
 }
 
 @keyframes sweep {
@@ -24,83 +18,75 @@ body {
 }
 
 h1 {
-  font-family: "Roboto";
-  font-size: 55;
-  color: white;
-  margin-bottom: 45px;
-  margin-top: 60px;
+    color: white;
+    font: bold 40px 'Roboto';
+    margin: 55px 10px 55px 10px;
 }
 
 h2 {
-  font-family: "Roboto";
-  font-size: 15;
-  color: #414141;
-  margin-top: 35px;
-  letter-spacing: 0.5px;
+    color: #414141;
+    font: bold 26px 'Roboto';
+    letter-spacing: 0.5px;
+    margin: 35px 0px 0px 0px;
 }
 
 p {
-  font-family: "Roboto";
-  font-size: 10;
-  color: #414141;
-  margin-bottom: 35px;
-  letter-spacing: 0.5px;
+    color: #414141;
+    font: 16px 'Roboto';
+    letter-spacing: 0.5px;
+    margin: 15px 0px 15px 0px;
+    padding: 2.5px;
 }
 
 li {
-  font-family: "Roboto";
-  font-size: 10;
-  color: #414141;
-  padding: 2.5px;
-  letter-spacing: 0.5px;
+    color: #414141;
+    font: 16px 'Roboto';
+    letter-spacing: 0.5px;
+    padding: 2.5px;
 }
 
 .button {
-  background-color: transparent;
-  border: none;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  font-family: "Roboto";
-  font-size: 10;
-  color: #414141;
-  letter-spacing: 0.5px;
+    background-color: transparent;
+    border: none;
+    color: #414141;
+    display: inline-block;
+    font: 16px 'Roboto';
+    letter-spacing: 0.5px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.2s;
 }
 
 .button1 {
-  font-family: "Roboto";
-  font-size: 10;
-  color: #414141;
-  border: 2px solid #414141;
+    border: 2px solid #414141;
+    color: #414141;
+    font: 16px 'Roboto';
 }
 
 .button1:hover {
-  font-family: "Roboto";
-  font-size: 10;
-  color: white;
-  background: #414141;
+    background: #414141;
+    color: white;
+    font: 16px 'Roboto';
 }
 
 #buttons {
-  text-align: center;
-  }
-
-#surprisePic {
-  display: none;
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
 }
 
-#greeting-container {
-  font-family: "Roboto";
-  font-size: 13;
-  color: #414141;
-  margin-bottom: 35px;
-  letter-spacing: 0.5px;
+#surprisePic {
+    display: none;
+    margin: 10px 0px 0px 0px;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+#comments-container {
+    color: #414141;
+    font: 16px 'Roboto';
+    letter-spacing: 0.5px;
+    margin: 0px 0px 35px 0px;
+    text-align: left;
 }
