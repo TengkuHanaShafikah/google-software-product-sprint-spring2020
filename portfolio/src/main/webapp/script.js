@@ -25,10 +25,26 @@ function showImage() {
 }
 
 /**
- * Shows the following greeting: "Hello Hana!"
+ * Shows the list of comments
  */
-async function getGreeting() {
-  const response = await fetch('/data');
-  const greeting = await response.text();
-  document.getElementById('greeting-container').innerText = greeting;
+function getComments() {
+    fetch('/data')
+    .then(response => response.json()).then((comments) => {
+
+    const commentsListElement = document.getElementById('comments-container');
+    commentsListElement.innerHTML = '';
+    commentsListElement.appendChild(
+        createListElement(comments[0]));
+    commentsListElement.appendChild(
+        createListElement(comments[1]));
+    commentsListElement.appendChild(
+        createListElement(comments[2]));
+  });
+}
+
+/** Creates an <ul> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('ul');
+  liElement.innerText = text;
+  return liElement;
 }
