@@ -39,9 +39,12 @@ function getComments() {
     });
 }
 
-/** Creates an <li> element containing text. */
-function createListElement(text) {
-  const liElement = document.createElement("li");
-  liElement.innerText = text;
-  return liElement;
+/** Creates an <li> element containing comment data. */
+function createListElement(line) {
+  const textElement = document.createElement('li');
+  textElement.innerText = line.text;
+
+  commentElement.appendChild(textElement);
+
+  return commentElement;
 }
