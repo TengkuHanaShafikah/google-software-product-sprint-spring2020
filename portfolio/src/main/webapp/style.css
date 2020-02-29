@@ -1,92 +1,98 @@
 #content {
-    background: white;
-    margin: 35px auto 65px auto;
-    padding: 35px 50px 50px 50px;
-    width: 700px;
+  background: white;
+  margin: 35px auto 65px auto;
+  padding: 35px 50px 50px 50px;
+  width: 700px;
 }
 
 body {
-    animation: sweep 10s infinite;
-	background: linear-gradient(45deg, #ff8519, #e73c7e, #9719ff, #00c7f2);
-	background-size: 350% 350%;
+  animation: sweep 10s infinite;
+  background: linear-gradient(45deg, #ff8519, #e73c7e, #9719ff, #00c7f2);
+  background-size: 350% 350%;
 }
 
 @keyframes sweep {
-	0% {background-position: 0% 0%;}
-	50% {background-position: 100% 0%;}
-	100% {background-position: 0% 0%;}
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 h1 {
-    color: white;
-    font: bold 40px 'Roboto';
-    margin: 55px 10px 55px 10px;
+  color: white;
+  font: bold 40px "Roboto";
+  margin: 55px 10px 55px 10px;
 }
 
 h2 {
-    color: #414141;
-    font: bold 26px 'Roboto';
-    letter-spacing: 0.5px;
-    margin: 35px 0px 0px 0px;
+  color: #414141;
+  font: bold 26px "Roboto";
+  letter-spacing: 0.5px;
+  margin: 35px 0px 0px 0px;
 }
 
 p {
-    color: #414141;
-    font: 16px 'Roboto';
-    letter-spacing: 0.5px;
-    margin: 15px 0px 15px 0px;
-    padding: 2.5px;
+  color: #414141;
+  font: 16px "Roboto";
+  letter-spacing: 0.5px;
+  margin: 15px 0px 15px 0px;
+  padding: 2.5px;
 }
 
 li {
-    color: #414141;
-    font: 16px 'Roboto';
-    letter-spacing: 0.5px;
-    padding: 2.5px;
+  color: #414141;
+  font: 16px "Roboto";
+  letter-spacing: 0.5px;
+  padding: 2.5px;
 }
 
 .button {
-    background-color: transparent;
-    border: none;
-    color: #414141;
-    display: inline-block;
-    font: 16px 'Roboto';
-    letter-spacing: 0.5px;
-    margin: 4px 2px;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    transition-duration: 0.2s;
+  background-color: transparent;
+  border: none;
+  color: #414141;
+  display: inline-block;
+  font: 16px "Roboto";
+  letter-spacing: 0.5px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
 }
 
 .button1 {
-    border: 2px solid #414141;
-    color: #414141;
-    font: 16px 'Roboto';
+  border: 2px solid #414141;
+  color: #414141;
+  font: 16px "Roboto";
 }
 
 .button1:hover {
-    background: #414141;
-    color: white;
-    font: 16px 'Roboto';
+  background: #414141;
+  color: white;
+  font: 16px "Roboto";
 }
 
 #buttons {
-    text-align: center;
+  text-align: center;
 }
 
 #surprisePic {
-    display: none;
-    margin: 10px 0px 0px 0px;
-    padding: 50px 0;
-    text-align: center;
-    width: 100%;
+  display: none;
+  margin: 10px 0px 0px 0px;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
 }
 
 #comments-container {
-    color: #414141;
-    font: 16px 'Roboto';
-    letter-spacing: 0.5px;
-    margin: 0px 0px 35px 0px;
-    text-align: left;
+  color: #414141;
+  font: 16px "Roboto";
+  letter-spacing: 0.5px;
+  margin: 0px 0px 35px 0px;
+  text-align: left;
 }

@@ -16,35 +16,32 @@
  * Toggles between showing and hiding a surprise image.
  */
 function showImage() {
-    var x = document.getElementById("surprisePic");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
+  var x = document.getElementById("surprisePic");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 
 /**
  * Shows the list of comments
  */
 function getComments() {
-    fetch('/data')
-    .then(response => response.json()).then((comments) => {
-
-    const commentsListElement = document.getElementById('comments-container');
-    commentsListElement.innerHTML = '';
-    commentsListElement.appendChild(
-        createListElement(comments[0]));
-    commentsListElement.appendChild(
-        createListElement(comments[1]));
-    commentsListElement.appendChild(
-        createListElement(comments[2]));
-  });
+  fetch("/data")
+    .then(response => response.json())
+    .then(comments => {
+      const commentsListElement = document.getElementById('comments-list');
+      commentsListElement.innerHTML = "";
+      commentsListElement.appendChild(createListElement(comments[0]));
+      commentsListElement.appendChild(createListElement(comments[1]));
+      commentsListElement.appendChild(createListElement(comments[2]));
+    });
 }
 
-/** Creates an <ul> element containing text. */
+/** Creates an <li> element containing text. */
 function createListElement(text) {
-  const liElement = document.createElement('ul');
+  const liElement = document.createElement("li");
   liElement.innerText = text;
   return liElement;
 }
