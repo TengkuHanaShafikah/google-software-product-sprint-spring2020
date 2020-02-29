@@ -25,17 +25,17 @@ function showImage() {
 }
 
 /**
- * Shows the list of comments
+ * Fetches the comments and builds the UI.
  */
 function getComments() {
   fetch("/data")
     .then(response => response.json())
     .then(comments => {
-      const commentsListElement = document.getElementById('comments-list');
+      const commentsListElement = document.getElementById("comments-list");
       commentsListElement.innerHTML = "";
-      commentsListElement.appendChild(createListElement(comments[0]));
-      commentsListElement.appendChild(createListElement(comments[1]));
-      commentsListElement.appendChild(createListElement(comments[2]));
+      comments.forEach(line => {
+        commentsListElement.appendChild(createListElement(line));
+      });
     });
 }
 
