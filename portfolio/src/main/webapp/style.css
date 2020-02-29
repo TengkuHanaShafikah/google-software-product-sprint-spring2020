@@ -96,3 +96,37 @@ li {
   margin: 0px 0px 35px 0px;
   text-align: left;
 }
+
+input[type="text"] {
+  border: 2px solid rgb(201, 201, 201);
+  box-sizing: border-box;
+  margin: 8px 0;
+  outline: none;
+  padding: 12px 20px;
+  transition: 0.5s;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #414141;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  border: 2px solid #414141;
+  color: #414141;
+  display: inline-block;
+  font: 16px "Roboto";
+  letter-spacing: 0.5px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: #414141;
+  color: white;
+  font: 16px "Roboto";
+}
