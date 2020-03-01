@@ -109,6 +109,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border: 2px solid #414141;
+  font: 16px "Roboto";
 }
 
 input[type="submit"] {
