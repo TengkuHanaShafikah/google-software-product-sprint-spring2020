@@ -44,10 +44,11 @@ public class DataServlet extends HttpServlet {
     List<Comment> comments = new ArrayList<>();
     for (Entity entity : results.asIterable()) {
       long id = entity.getKey().getId();
-      String newComment = (String) entity.getProperty("text");
+      String name = (String) entity.getProperty("name");  //NEW
+      String text = (String) entity.getProperty("text");
       long time = (long) entity.getProperty("time");
 
-      Comment comment = new Comment(id, newComment, time); 
+      Comment comment = new Comment(id, name, text, time);   //NEW
       comments.add(comment);
     }
 
@@ -61,13 +62,16 @@ public class DataServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
+    String userName = request.getParameter("name"); //NEW
     String userInput = request.getParameter("text");
     long time = System.currentTimeMillis();
 
     // Store comment in the comment entity.
     Entity commentEntity = new Entity("Comment");
+    commentEntity.setProperty("name", userName); //NEW
     commentEntity.setProperty("text", userInput);
     commentEntity.setProperty("time", time); 
+
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(commentEntity);
 
