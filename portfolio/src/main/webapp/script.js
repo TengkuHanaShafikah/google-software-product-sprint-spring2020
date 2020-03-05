@@ -48,7 +48,6 @@ function createListElement(comment) {
   const textElement = document.createElement('span');
   textElement.innerText = comment.text;
 
-  // New
   const scoreElement = document.createElement('span');
   scoreElement.innerText = " (Score: " + comment.score + " | ";
 
