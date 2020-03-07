@@ -93,8 +93,17 @@ li {
   color: #414141;
   font: 16px "Roboto";
   letter-spacing: 0.5px;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 0px 0px;
   text-align: left;
+}
+
+#comments-list ul {
+  border-bottom: 2px solid rgb(201, 201, 201);
+  list-style: none;
+  padding-left: 0;
+  margin-right: 45px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 input[type="text"] {
