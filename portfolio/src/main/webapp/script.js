@@ -43,16 +43,16 @@ function createListElement(comment) {
   commentElement.className = 'comment';
 
   const nameElement = document.createElement('b');
-  nameElement.innerText = comment.name + ": ";
+  nameElement.innerText = `${comment.name}: `;
 
   const textElement = document.createElement('span');
   textElement.innerText = comment.text;
 
   const scoreElement = document.createElement('span');
-  scoreElement.innerText = " (Score: " + comment.score + " | ";
+  scoreElement.innerText = ` (Score: ${comment.score} |`;
 
   const timeElement = document.createElement('span');
-  timeElement.innerText = "Date: " + comment.date + ")";
+  timeElement.innerText = ` Date: ${comment.date})`;
   
   commentElement.appendChild(nameElement);
   commentElement.appendChild(textElement);
