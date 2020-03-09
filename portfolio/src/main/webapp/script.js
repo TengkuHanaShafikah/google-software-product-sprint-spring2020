@@ -33,28 +33,30 @@ function getComments() {
     .then(comments => {
       const commentsListElement = document.getElementById("comments-list");
       commentsListElement.innerHTML = "";
-      comments.forEach(line => {
-        commentsListElement.appendChild(createListElement(line));
-      });
+      comments.map(createListElement).forEach(line => commentsListElement.appendChild(line));
     });
 }
 
-/** Creates an <li> element containing comment data.*/
+/** Creates an <ul> element containing comment data.*/
 function createListElement(comment) {
-  const commentElement = document.createElement('li');
+  const commentElement = document.createElement('ul');
   commentElement.className = 'comment';
 
   const nameElement = document.createElement('b');
-  nameElement.innerText = comment.name + ": ";
+  nameElement.innerText = `${comment.name}: `;
 
   const textElement = document.createElement('span');
   textElement.innerText = comment.text;
 
+  const scoreElement = document.createElement('span');
+  scoreElement.innerText = ` (Score: ${comment.score} |`;
+
   const timeElement = document.createElement('span');
-  timeElement.innerText = "   (" + comment.date + ")";
+  timeElement.innerText = ` Date: ${comment.date})`;
   
   commentElement.appendChild(nameElement);
   commentElement.appendChild(textElement);
+  commentElement.appendChild(scoreElement);
   commentElement.appendChild(timeElement);
 
   return commentElement;
