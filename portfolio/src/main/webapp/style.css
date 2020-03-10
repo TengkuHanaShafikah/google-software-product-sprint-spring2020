@@ -97,13 +97,11 @@ li {
   text-align: left;
 }
 
-#comments-list ul {
+#comments-list li{
   border-bottom: 2px solid rgb(201, 201, 201);
   list-style: none;
-  padding-left: 0;
-  margin-right: 45px;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
+  margin: 0px 45px 25px 0px;
+  padding: 0px 0px 25px 0px;
 }
 
 input[type="text"] {
