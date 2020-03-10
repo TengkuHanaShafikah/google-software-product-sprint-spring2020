@@ -37,6 +37,16 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+  // Pass user's comment text to LanguageServiceClient and receive sentiment score.
+  public float getSentimentScore(String text) throws IOException {
+    Document doc = Document.newBuilder().setContent(text).setType(Document.Type.PLAIN_TEXT).build();
+    LanguageServiceClient languageService = LanguageServiceClient.create();
+    Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
+    float score = sentiment.getScore();
+    languageService.close();
+    return score;
+  }
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Query query = new Query("Comment").addSort("time", SortDirection.DESCENDING);
@@ -50,14 +60,8 @@ public class DataServlet extends HttpServlet {
       long id = entity.getKey().getId();
       String name = (String) entity.getProperty("name"); 
       String text = (String) entity.getProperty("text");
+      double score = (double) entity.getProperty("score");
       long time = (long) entity.getProperty("time");
-      
-      // Pass user's comment text to LanguageServiceClient and receive sentiment score.
-      Document doc = Document.newBuilder().setContent(text).setType(Document.Type.PLAIN_TEXT).build();
-      LanguageServiceClient languageService = LanguageServiceClient.create();
-      Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
-      float score = sentiment.getScore();
-      languageService.close();
 
       // Create Comment object.
       Comment comment = new Comment(id, text, name, score, time);
@@ -79,8 +83,8 @@ public class DataServlet extends HttpServlet {
     String userInput = request.getParameter("text");
     long time = System.currentTimeMillis();
 
-    // Create placeholder sentiment score.
-    float score = 0;
+    // Pass user's comment text to LanguageServiceClient and receive sentiment score.
+    float score = getSentimentScore(userInput);
 
     // Store comment in the comment entity.
     Entity commentEntity = new Entity("Comment");
