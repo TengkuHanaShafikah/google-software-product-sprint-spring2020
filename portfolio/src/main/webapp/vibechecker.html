@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vibe Checker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body onload="getComments()">
+    <!–– Header ––>
+    <h1 align="center">VIBE CHECKER</h1>
+
+    <!–– Site Content ––>
+    <div id="content">
+      <!–– Intro ––>
+      <h2 align="center"> 🤔 What is Vibe Checker? </h2>
+      <p align="center"> It's a web app that interprets the emotion expressed in the comments, 
+          and it can be used to help online creators determine how their audience feels about 
+          the subject being shown — whether it be an image, video, post or article. Each comment 
+          has an emoji badge that corresponds to the vibe that the comment emits (hopefully they are good vibes 😎). </p>
+      <p align="center">👩‍💻 Made by Tengku Hana Shafikah during the Spring 2020 Google Software Product Sprint. </p>
+      
+      <!–– Comments ––>
+      <h2 align="center">Comments 💬</h2>
+      <p align="center"> Feel free to leave a comment down below to test it out! </p>
+
+      <div id="buttons">
+      <form action="/data" method="POST">
+        <input type="text" name="name" placeholder="Name"><br/>
+        <input type="text" name="text" placeholder="Say something..."><br/><br/>
+        <input type="submit" value="Post"><br/><br/><br/>
+      </form>
+       
+      <div id="comments-container">
+        <ul id="comments-list"/></ul>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
